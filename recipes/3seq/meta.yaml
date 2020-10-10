@@ -1,0 +1,27 @@
+package:
+  name: 3seq
+  version: "1.0.0"
+
+build:
+  number: 0
+
+source:
+  git_url: https://gitlab.com/lamhm/3seq.git
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+
+test:
+  commands:
+    - 3seq -help | grep 'Input file may be PHYLIP'
+
+about:
+  home: https://mol.ax/software/3seq/
+  license: CC BY-NC-SA 4.0
+  license_file: LICENSE.md
+  summary: Non-parametric test for identifying recombination in sequence data.
+
+extra:
+  maintainers:
+    - fredjaya 
